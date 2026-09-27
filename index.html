@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục trang web Responsive với DIV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER (ĐẦU TRANG) -->
+    <div class="header">
+        <h1>Chuyên Mục Công Nghệ</h1>
+        <p>Bố cục website responsive cơ bản bằng DIV và CSS</p>
+    </div>
+
+    <!-- 2. THANH ĐIỀU HƯỚNG NGANG (NAVBAR) -->
+    <div class="navbar">
+        <a href="#">Trang chủ</a>
+        <a href="#">Tin tức</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#" class="right">Đăng nhập</a>
+    </div>
+
+    <!-- 3. KHU VỰC THÂN TRANG (ROW CHỨA CÁC CỘT) -->
+    <div class="row">
+        
+        <!-- CỘT TRÁI: MENU / SIDEBAR (Chiếm ~25%) -->
+        <div class="side">
+            <h2>Giới thiệu</h2>
+            <h5>Ảnh đại diện:</h5>
+            <div class="fake-img" style="height: 180px;">Hình ảnh demo</div>
+            <p>Trang web thực hành phân chia bố cục linh hoạt giữa các màn hình khác nhau.</p>
+            
+            <h3>Liên kết nhanh</h3>
+            <ul class="side-menu">
+                <li><a href="#">Học HTML cơ bản</a></li>
+                <li><a href="#">Luyện CSS Box Model</a></li>
+                <li><a href="#">Responsive Web Design</a></li>
+                <li><a href="#">CSS Flexbox & Grid</a></li>
+            </ul>
+        </div>
+
+        <!-- CỘT GIỮA: NỘI DUNG CHÍNH (Chiếm ~50%) -->
+        <div class="main">
+            <h2>BÀI VIẾT NỔI BẬT: CSS RESPONSIVE</h2>
+            <h5>Cập nhật ngày 27/09/2026</h5>
+            <div class="fake-img" style="height: 200px;">Banner bài viết</div>
+            <p><strong>Responsive Web Design (RWD)</strong> là phương pháp thiết kế giúp giao diện trang web hiển thị tối ưu trên nhiều loại thiết bị với kích thước màn hình khác nhau từ máy tính để bàn (Desktop), máy tính bảng (Tablet) cho đến điện thoại thông minh (Mobile).</p>
+            <p>Bằng cách sử dụng đơn vị phần trăm (%), thuộc tính <code>flexbox</code> hoặc hệ thống Grid View 12 cột, các thành phần sẽ tự co giãn và thay đổi thứ tự hiển thị linh hoạt.</p>
+            
+            <br>
+            <h2>BÀI VIẾT 2: TỐI ƯU HÓA LAYOUT</h2>
+            <h5>Cập nhật ngày 26/09/2026</h5>
+            <div class="fake-img" style="height: 200px;">Banner bài viết 2</div>
+            <p>Khi màn hình thu nhỏ dưới một kích thước nhất định (Breakpoint), truy vấn <code>@media screen and (max-width: 768px)</code> sẽ kích hoạt, chuyển hướng bố cục các cột ngang thành cột dọc xếp chồng lên nhau giúp người dùng dễ dàng lướt đọc trên điện thoại.</p>
+        </div>
+
+        <!-- CỘT PHẢI: TIN BỔ SUNG / THÔNG BÁO (Chiếm ~25%) -->
+        <div class="side-extra">
+            <h2>Tin mới</h2>
+            <div class="card">
+                <h4>Khóa học mới</h4>
+                <p>Khóa học Web Frontend hiện đại bắt đầu khai giảng tuần tới.</p>
+            </div>
+            <div class="card">
+                <h4>Thông báo</h4>
+                <p>Hệ thống LMS cập nhật tính năng nộp bài tự động qua GitHub.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 4. FOOTER (CHÂN TRANG) -->
+    <div class="footer">
+        <h3>&copy; 2026 Responsive Web Practice. All rights reserved.</h3>
+    </div>
+
+</body>
+</html>
