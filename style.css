@@ -1,0 +1,166 @@
+/* Thiết lập Box Sizing để tính padding/border vào kích thước tổng */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 1. Header */
+.header {
+    padding: 40px 20px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/* 2. Navbar */
+.navbar {
+    display: flex;
+    background-color: #333;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.right {
+    margin-left: auto;
+}
+
+/* 3. Bố cục các cột (Flexbox Layout) */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Cột trái (Side Menu) */
+.side {
+    flex: 25%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Cột giữa (Nội dung chính) */
+.main {
+    flex: 50%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Cột phải (Thông tin thêm) */
+.side-extra {
+    flex: 25%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Khối giả lập hình ảnh */
+.fake-img {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Danh sách menu bên */
+.side-menu {
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.side-menu li {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.side-menu a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.side-menu a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    background-color: #fdfdfd;
+    border-left: 4px solid #1abc9c;
+    padding: 12px;
+    margin-top: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #444;
+    color: white;
+    margin-top: 20px;
+}
+
+/* =========================================================
+   5. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================= */
+
+/* Khi màn hình nhỏ hơn 900px (Tablet): Cột phải nhảy xuống dưới */
+@media screen and (max-width: 900px) {
+    .side, .side-extra {
+        flex: 100%;
+    }
+    .main {
+        flex: 100%;
+    }
+}
+
+/* Khi màn hình nhỏ hơn 600px (Mobile): Các liên kết Menu & Cột xếp dọc */
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        padding: 10px;
+        gap: 12px;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar a.right {
+        margin-left: 0;
+    }
+}
